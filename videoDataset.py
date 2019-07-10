@@ -111,7 +111,8 @@ class videoDataset(Dataset):
         clip, failedClip = self.readVideo(videoFile)
         if self.transform:
             clip = self.transform(clip)
-        sample = {'clip': clip, 'label': self.clipsList[idx][1], 'failedClip': failedClip}
+        #sample = {'clip': clip, 'label': self.clipsList[idx][1], 'failedClip': failedClip}
+        sample = {'clip': clip}
 
         return sample
 
